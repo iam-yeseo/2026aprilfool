@@ -76,10 +76,22 @@ p {
 
 .logo {
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-fallback {
   color: var(--text);
-  letter-spacing: 0.08em;
-  font-weight: 800;
-  text-transform: lowercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .menu {
@@ -254,6 +266,67 @@ p {
   padding: 4rem 2rem;
 }
 
+
+.detail-visual {
+  padding: 5.5rem 0;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(62, 118, 255, 0.2), rgba(4, 6, 13, 0) 55%),
+    linear-gradient(180deg, rgba(8, 12, 24, 0.88), rgba(5, 8, 16, 0.96));
+}
+
+.detail-visual-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-frame {
+  width: min(1240px, 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(158, 186, 255, 0.2);
+  overflow: hidden;
+  box-shadow:
+    0 34px 72px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(86, 142, 255, 0.18);
+  background: rgba(8, 12, 22, 0.85);
+  position: relative;
+}
+
+.detail-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(100, 149, 255, 0.16), rgba(0, 0, 0, 0.35));
+}
+
+#detail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.detail-placeholder {
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  border: 1px dashed rgba(176, 195, 243, 0.45);
+  margin: 1.2rem;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -386,6 +459,25 @@ p {
   padding: 1rem 0 2rem;
 }
 
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .site-footer p {
   color: #7f8eb0;
   font-size: 0.85rem;
@@ -461,6 +553,14 @@ p {
 @media (max-width: 620px) {
   .menu {
     display: none;
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  .footer-logo-img {
+    height: 22px;
   }
 
   .section {

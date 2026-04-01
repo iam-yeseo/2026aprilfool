@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const productImage = document.getElementById('product-image');
   const placeholder = document.getElementById('product-placeholder');
+  const detailImage = document.getElementById('detail-image');
+  const detailPlaceholder = document.getElementById('detail-placeholder');
   const quantityInput = document.getElementById('quantity');
   const increaseBtn = document.getElementById('increase');
   const decreaseBtn = document.getElementById('decrease');
@@ -15,6 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
     productImage.hidden = true;
     placeholder.hidden = false;
   });
+
+  if (detailImage) {
+    detailImage.addEventListener('error', () => {
+      detailImage.hidden = true;
+      detailPlaceholder.hidden = false;
+    });
+  }
+
+  // Fade-in reveal for campaign visual section.
+  const revealItems = document.querySelectorAll('.reveal-on-scroll');
+  if ('IntersectionObserver' in window && revealItems.length > 0) {
+    const observer = new IntersectionObserver((entries, io) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  }
 
   // Quantity controls.
   const clampQuantity = () => {
