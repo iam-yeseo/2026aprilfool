@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   addCartBtn.addEventListener('click', () => {
     clampQuantity();
-    showToast(`Added ${quantityInput.value} PTZ-10000X unit(s) to cart. Launch prep initiated.`);
+    showToast(`CAL-10KX ${quantityInput.value}대를 장바구니에 담았습니다. 우주 배송을 준비합니다.`);
   });
 
   buyNowBtn.addEventListener('click', () => {
     clampQuantity();
-    showToast('Instant checkout engaged. Contact mission control for delivery ETA.');
+    showToast('바로 구매가 시작되었습니다. 관제센터에서 출고를 승인 중입니다.');
   });
 
   // Countdown to end of April 1 (local time).
