@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTZ-10000X Hyper Zoom | CALLA VISION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-a" aria-hidden="true"></div>
+    <div class="page-glow glow-b" aria-hidden="true"></div>
+
+    <!-- Site navigation -->
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary">
+        <a href="#hero" class="logo">CALLA VISION</a>
+        <ul class="menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#specs">Specs</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#buy">Buy Now</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <section id="hero" class="hero section container">
+        <div class="hero-copy">
+          <p class="eyebrow">LIMITED APRIL 1 EDITION</p>
+          <h1>PTZ-10000X Hyper Zoom</h1>
+          <p class="tagline">See the impossible.</p>
+          <p class="intro">
+            Built for elite broadcast teams, lunar observatories, and overachieving
+            event crews, the PTZ-10000X delivers impossibly sharp cinematic control
+            from studio floor to stratosphere.
+          </p>
+
+          <div class="price-row" aria-label="Product price">
+            <span class="old-price">$9,999</span>
+            <span class="new-price">$4,999</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#buy">Buy Now</a>
+            <a class="btn btn-ghost" href="#specs">View Specs</a>
+          </div>
+
+          <div class="countdown" aria-live="polite">
+            <span class="countdown-label">April 1 Sale Ends In</span>
+            <strong id="countdown-timer">--:--:--</strong>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="badge">LIMITED APRIL 1 EDITION</div>
+          <div class="product-frame">
+            <img
+              src="./assets/product-thumb.png"
+              alt="PTZ-10000X Hyper Zoom camera"
+              id="product-image"
+            />
+            <div class="product-placeholder" id="product-placeholder" hidden>
+              Product Thumbnail Here
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature cards -->
+      <section id="features" class="section container">
+        <h2>Key Features</h2>
+        <div class="grid feature-grid">
+          <article class="card">
+            <h3>10000x Optical Zoom</h3>
+            <p>Read tiny serial numbers from five stadiums away without leaving live mode.</p>
+          </article>
+          <article class="card">
+            <h3>Lunar Surface Tracking</h3>
+            <p>Follow moon craters in real time while your director asks for a tighter shot.</p>
+          </article>
+          <article class="card">
+            <h3>Mars Mission Certified</h3>
+            <p>Officially tested in simulation chambers and one suspiciously red parking lot.</p>
+          </article>
+          <article class="card">
+            <h3>Emotion AI Autofocus</h3>
+            <p>Detects joy, panic, and post-show exhaustion for empathetic focus transitions.</p>
+          </article>
+          <article class="card">
+            <h3>Zero-Gravity Pan Control</h3>
+            <p>Butter-smooth movement tuned for terrestrial rigs and hypothetical space studios.</p>
+          </article>
+          <article class="card">
+            <h3>Ultra Deep Space Denoise</h3>
+            <p>Keeps image noise low even when shooting under starlight and dramatic lighting.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Specifications -->
+      <section id="specs" class="section container">
+        <h2>Specifications</h2>
+        <div class="spec-wrap">
+          <table class="spec-table">
+            <tbody>
+              <tr><th>Zoom</th><td>10000x Optical</td></tr>
+              <tr><th>Resolution</th><td>32K Cosmic HDR</td></tr>
+              <tr><th>Tracking</th><td>Planetary AI Tracking 2.0</td></tr>
+              <tr><th>Stabilization</th><td>Ultra Hyper Galaxy Stabilization</td></tr>
+              <tr><th>Connectivity</th><td>HDMI / 12G-SDI / NDI / Satellite Link / Quantum LAN</td></tr>
+              <tr><th>Power</th><td>24V DC / Solar Backup / Unknown Energy Source</td></tr>
+              <tr><th>Operating Range</th><td>Earth to Low Mars Orbit</td></tr>
+              <tr><th>Autofocus</th><td>Emotion-Detecting Neural Focus Matrix</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section id="reviews" class="section container">
+        <h2>Customer Reviews</h2>
+        <div class="grid review-grid">
+          <article class="card review">
+            <p>“I mounted this in our church control room and accidentally zoomed into Jupiter.”</p>
+            <span>- Ava R., Technical Director</span>
+          </article>
+          <article class="card review">
+            <p>“Excellent image quality. I can now confirm my neighbor's cat is plotting something.”</p>
+            <span>- Marcus T., Live Producer</span>
+          </article>
+          <article class="card review">
+            <p>“The AI subject lock followed our host, a drone, and the moon in one shot. Unreal.”</p>
+            <span>- Lila S., Broadcast Engineer</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Purchase box -->
+      <section id="buy" class="section container">
+        <h2>Purchase</h2>
+        <div class="purchase card">
+          <div class="field-row">
+            <label for="quantity">Quantity</label>
+            <div class="qty-wrap">
+              <button class="qty-btn" type="button" id="decrease" aria-label="Decrease quantity">-</button>
+              <input id="quantity" type="number" min="1" value="1" />
+              <button class="qty-btn" type="button" id="increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="color">Color</label>
+            <select id="color">
+              <option>Space Black</option>
+              <option>Lunar Silver</option>
+              <option>Martian Red</option>
+            </select>
+          </div>
+
+          <div class="purchase-actions">
+            <button class="btn btn-ghost" id="add-cart" type="button">Add to Cart</button>
+            <button class="btn btn-primary" id="buy-now" type="button">Buy Instantly</button>
+          </div>
+
+          <p class="stock">Only 3 left in this galaxy</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>This product page is a fictional April Fools' concept.</p>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
